@@ -14,6 +14,8 @@ Given a list of non-negative integers nums, arrange them such that they form the
   Input : [3432312, 3432]
   Output: "34323432312"
 ```
+<br><br><br>
+
 **Observation**
 
 Solution appears simple, - sort input array largest to smalles and then join numbers into result string. Interesting part is the compare func for the sorting. 
@@ -22,8 +24,8 @@ Simple solution for compare function is
 def __lt__(self, other):
    return int(self.value + other.value) < int(other.value + self.value)
 ```
-More interesting solution is where you do not convert joined strings to number. 
-
+More interesting solution is where you do not convert joined strings to number.
+<br><br><br>
 
 
 **Compare Algorithm** 
@@ -32,6 +34,7 @@ We take 2 string, A and B, and need to figure if AB or BA be the largest number.
 ```
 So, [A,B] = [**3432**312, 3432] -> [**3**12, **3**432] -> [12, 432] -> second number should go first = BA is largest number 
 ```
+<br><br><br>
 
 
 **Runtime** 
@@ -41,4 +44,4 @@ We have soring, which is n•log(n). Compare function best case is O(1) and wors
 
 LeetCode says my solution runs about average, 50% of all online submissions which is expected because faster would be to convert AB and BA to numbers and compare but it would not be that interesting.
 
-![Image of Yaktocat](https://github.com/protyagov/unique-substrings/blob/master/leetcode.png)
+![Image of Yaktocat](https://github.com/protyagov/largest-number/blob/master/leetcode.png)
