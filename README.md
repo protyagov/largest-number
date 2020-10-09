@@ -32,7 +32,7 @@ More interesting solution is where you do not convert joined strings to number.
 
 We take 2 string, A and B, and need to figure if AB or BA be the largest number. Strings with equal length are easy, - just compare them. Challenging are strings that start with the same numbers, ex: [3432312, 3432]. Simple compare would not work here. What we need to do is recurcively remove common part from the start of the largest string until we find first difference.
 ```
-So, [A,B] = [**3432**312, 3432] -> [**3**12, **3**432] -> [12, 432] -> second number should go first = BA is largest number 
+So, [A,B] = [3432312, 3432] -> [312, 3432] -> [12, 432] -> second number should go first = BA is largest number 
 ```
 <br><br><br>
 
@@ -44,4 +44,5 @@ We have soring, which is n•log(n). Compare function best case is O(1) and wors
 
 LeetCode says my solution runs about average, 50% of all online submissions which is expected because faster would be to convert AB and BA to numbers and compare but it would not be that interesting.
 
-![Image of Yaktocat](https://github.com/protyagov/largest-number/blob/master/leetcode.png)
+
+![Image of Yaktocat](https://github.com/protyagov/largest-number/blob/main/leetcode.png)
